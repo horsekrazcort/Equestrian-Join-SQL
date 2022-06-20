@@ -1,0 +1,75 @@
+CREATE TABLE equestrians (id INTEGER PRIMARY KEY,
+    full_name TEXT,
+    age INTEGER);
+
+INSERT INTO equestrians (full_name, age)
+    VALUES ("Beezie Madden", 58);
+INSERT INTO equestrians (full_name, age)
+    VALUES ("Kyle Carter", 53);
+INSERT INTO equestrians (full_name, age)
+    VALUES ("Ingrid Klimke", 54);
+INSERT INTO equestrians (full_name, age)
+    VALUES ("Oliver Townend", 40);
+INSERT INTO equestrians (full_name, age)
+    VALUES ("Jonelle Price", 42);
+INSERT INTO equestrians (full_name, age)
+    VALUES ("Tim Price", 43);
+INSERT INTO equestrians (full_name, age)
+    VALUES ("Tom Mcewen", 44);
+INSERT INTO equestrians (full_name, age)
+    VALUES ("Kevin McNab", 44);
+INSERT INTO equestrians (full_name, age)
+    VALUES ("Michael Jung", 40);
+INSERT INTO equestrians (full_name, age)
+    VALUES ("Gemma Tattersall", 37);
+INSERT INTO equestrians (full_name, age)
+    VALUES ("Piggy March", 42);
+INSERT INTO equestrians (full_name, age)
+    VALUES ("Boyd Martin", 43);
+INSERT INTO equestrians (full_name, age)
+    VALUES ("Nicola Wilson", 46);
+INSERT INTO equestrians (full_name, age)
+    VALUES ("Laura Collett", 33);
+INSERT INTO equestrians (full_name, age)
+    VALUES ("Rosalind Canter", 36);
+    
+SELECT * FROM equestrians;
+    
+CREATE TABLE horses (id INTEGER PRIMARY KEY,
+    rider_id INTEGER,
+    horse_name TEXT);
+    
+INSERT INTO horses (rider_id, horse_name)
+    VALUES (1, "Breitling LS");
+ INSERT INTO horses (rider_id, horse_name)
+    VALUES (2, "Reddy Or Not");
+INSERT INTO horses (rider_id, horse_name)
+    VALUES (3, "Van Hera P");
+INSERT INTO horses (rider_id, horse_name)
+    VALUES (4, "Caunton First Class");
+INSERT INTO horses (rider_id, horse_name)
+    VALUES (5, "Classic Moet");
+INSERT INTO horses (rider_id, horse_name)
+    VALUES (6, "Viscount Viktor");
+INSERT INTO horses (rider_id, horse_name)
+    VALUES (7, "Brookfield Benjamin Bounce");
+INSERT INTO horses (rider_id, horse_name)
+    VALUES (8, "Fernhill Tabasco");
+INSERT INTO horses (rider_id, horse_name)
+    VALUES (9, "Fischerchipmunk Frh");
+INSERT INTO horses (rider_id, horse_name)
+    VALUES (10, "Flash Cooley");
+INSERT INTO horses (rider_id, horse_name)
+    VALUES (11, "Halo");
+INSERT INTO horses (rider_id, horse_name)
+    VALUES (12, "Tsetserleg Tsf");
+INSERT INTO horses (rider_id, horse_name)
+    VALUES (13, "Bulana");
+INSERT INTO horses (rider_id, horse_name)
+    VALUES (14, "London 52");
+INSERT INTO horses (rider_id, horse_name)
+    VALUES (15, "Allstar B");
+    
+SELECT equestrians.full_name AS "rider", horses.horse_name AS "horse" FROM equestrians
+JOIN horses
+ON equestrians.id = horses.rider_id;
